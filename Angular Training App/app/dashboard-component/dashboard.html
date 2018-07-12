@@ -1,0 +1,48 @@
+
+<div style="z-index: -2">
+<div class="container-fluid">
+    <div class="row"  >
+        <div  class="col-sm-12" style="padding: 0%">
+                <div class="card" style="padding: 0px 0px 0px 10px;">
+            <form>
+                <h5>TODO CONTENT(*)</h5>
+                <div>
+                    <input type = "text" id="todoName" placeholder="title" style="width: 50%;" data-ng-model="todoName">
+                </div>
+                <br>
+                <div>
+                    <h5>DESCRIPTION</h5>
+                    <br>
+                    <textarea rows="4" cols="77" data-ng-model=todoDesc></textarea>
+                </div>
+                <div ng-if="todoName!=undefined && todoName!=null && todoName!=''">
+                    <button ng-click="addData()" style=" position: relative; margin-left: 55%;  text-size-adjust:10px ; width: 50px; background:none;">+</button>
+                </div>        
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row"  >
+        <div class="col-sm-6 card" style=" min-height:250px; padding: 0px 0px 0px 10px; border-color: black; border-style:ridge; border-color: rgb(247, 142, 56);">
+            <div  ><h5><b><u>TITLE</u></b></h5></div>
+            <ul>
+                <div>
+                    <li  style=" list-style: none;" id="title" ng-mouseover="open=true " ng-mouseleave="open=false"  ng-repeat="x in todoList">
+                    <input type="checkbox"  ng-model="x.checked" style="width: 15px;">
+                    <label  ng-click="showDesc($index)" style="position: relative;bottom: 12px;" ng-class="{'strike1':x.checked}" >{{x.name}}</label>
+                    <button  ng-show="open" style=" position: relative;bottom: 12px;left: 100px; border-radius: 100%; background:none" ng-click="delete()">X</button>
+                </li>
+                </div>
+
+            </ul>
+        </div>
+        <div class="col-sm-6 card" style=" padding: 0px 0px 0px 10px; min-height:250px;  border-style:ridge; border-color: rgb(247, 142, 56);" >
+            <h5 ><b><u>DESCRIPTION</u></b></h5>
+            <p  id="descPara">NO DESCRIPTION</p>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,41 @@
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #eb903c;
+    color: #fff;
+    height: 50px;
+    line-height: 3;
+}
+header ul{
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header ul li{
+float: left;
+line-height: 3;
+margin-right: 10px;
+}
+header ul li button{
+    height: 35px;
+    color: #fff;
+    width: 100px;
+    outline: none;
+    border: 1px solid #fff;
+    background: #0a98e9;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+main{
+    position: absolute;
+    left: 0;
+    top: 50px;
+    height: calc(100% - 50px);
+    width: 100%;
+}
+
